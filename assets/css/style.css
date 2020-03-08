@@ -11,6 +11,13 @@
     padding: 10px;
     text-align: center;
     font-family: 'Viaoda Libre', cursive;
+    background-color: rgba(245, 245, 220, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 300;
+    color: crimson;
+    
+    
 }
 
 .timeRemaining {
@@ -23,5 +30,10 @@
 
 .answers {
 
+}
+body {
+    background-image: url(../images/baby.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 

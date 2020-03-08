@@ -21,5 +21,6 @@ To create a trivia game on any subject using HTML, CSS, JavaScript, and jQuery
 
  #### Collaborated with:
  1. John Pendergrass
+ 2. Zach Ledford
 
  

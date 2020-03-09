@@ -96,7 +96,7 @@ $(document).ready(function () {
             if (id === correct) {
                 answered = true;
                 $('.question').text("The Correct Answer is: " + game[indexQandA].answer[correct]);
-                correctAnswers();
+                correctAnswer();
             } else {
                 answered = true;
                 $('.question').text("YOUR ANSWER WAS: " + game[indexQandA].answer[id] + "But the Real Answer is: " + game[indexQandA].answer[correct]);
@@ -143,6 +143,8 @@ $(document).ready(function () {
         reset();
 
     function reset () {
-        
+        $('.allAnswers').remove();
+
+
     }
-    })
+    });

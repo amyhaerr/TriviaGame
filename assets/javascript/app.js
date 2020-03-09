@@ -2,19 +2,16 @@
 
 $(document).ready(function () {
 
-
     //variables needed to play the game:
 
     var correctAnswers = 0;
     var incorrectAnswers = 0;
     var unAnswered = 0;
-    var timeRemaining = 8;
-    var interValidId;
+    var timeRemaining = 16;
+    var intervalidId;
     var indexQandA = 0;
     var answered = false;
     var correct;
-
-
 
 
     // questions and answers for the game:
@@ -61,6 +58,33 @@ $(document).ready(function () {
     }
 
 }];
+
+
+// functions
+
+function start() {
+    $('.start-button').remove();
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+    unAnswered = 0;
+    loadandA();
+}
+
+function loadandA() {
+    answered =false;
+    timeRemaining = 16;
+    intervalidId = setInterval(timer, 3000);
+    if (answered === false) {
+        timer();
+    }
+    correct = game(indexQandA).correct;
+    var question = game[indexQandA].question;
+    $('question').html(question);
+    for (var i = 0; i < 4; i++) {
+        var answer = game[indexQandA].answer[i];
+        $('.answers').append('<h4 class=allAnswers id=' + i + '>' + answer + '</h4>');
+    }
+}
 
 }];
 

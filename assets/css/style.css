@@ -1,5 +1,6 @@
 #wrapper {
-
+    width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -16,21 +17,9 @@
     background-size: cover;
     font-weight: 300;
     color: crimson;
+}
     
-    
-}
-
-.timeRemaining {
-
-}
-
-.questionHeader {
-
-}
-
-.answers {
-
-}
+ 
 body {
     background-image: url(../images/impala.jpg);
     background-repeat: no-repeat;

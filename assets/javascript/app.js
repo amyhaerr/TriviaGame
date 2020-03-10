@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
 
     //variables needed to play the game:
@@ -83,7 +81,9 @@ $(document).ready(function () {
         if (answered === false) {
             timer();
         }
-        var correct = game(indexQandA).correct;
+        
+
+        var correct = game[indexQandA].correct;
         var question = game[indexQandA].question;
         $('question').html(question);
         for (var i = 0; i < 4; i++) {
@@ -96,7 +96,7 @@ $(document).ready(function () {
             if (id === correct) {
                 answered = true;
                 $('.question').text("The Correct Answer is: " + game[indexQandA].answer[correct]);
-                correctAnswer();
+                correctAnswers();
             } else {
                 answered = true;
                 $('.question').text("YOUR ANSWER WAS: " + game[indexQandA].answer[id] + "But the Real Answer is: " + game[indexQandA].answer[correct]);
@@ -130,7 +130,7 @@ $(document).ready(function () {
 
     function incorrectAnswer() {
         incorrectAnswers++;
-        $('timeRemaining').text("").css({
+        $('timeRemaining').text("You missed the mark!").css({
             'color': '#31A91A'
         });
         reset();
@@ -141,10 +141,30 @@ $(document).ready(function () {
             'color': '#31A91A'
         });
         reset();
+   
+    }
 
     function reset () {
         $('.allAnswers').remove();
-
-
-    }
-    });
+        $('.answers').append('<img class=answerImage width="150" height="150" src="' + game[indexQandA].image +'">');
+        indexQandA++;
+        if (indexQandA < game.length) {
+            setTimeout(function () {
+                loadandA();
+                $('.answerImage').remove();
+            }, 5000);
+        }else {
+            setTimeout(function (){
+                $('.question').remove();
+                $('.timeRemaining').remove();
+                $('.answerImage').remove();
+                $('answers').append('<h4 class=allAnswers end>Correct Answers: '+correctAnswers + '</h4>');
+                $('answers').append('<h4 class=allAnswers end>Incorrect Answers: '+incorrectAnswers + '</h4>');
+                $('answers').append('<h4 class=allAnswers end>Unanswered Answers: '+unAnswered + '</h4>');
+                ;setTimeout(function (){
+                    location.reload()
+                }, 7000);
+            }, 5000);
+        }
+    };
+    }) 

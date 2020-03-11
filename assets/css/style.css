@@ -36,7 +36,8 @@ h3 {
 }
 
 h4 {
-    color: darkgreen;
+    color: royalblue;
+    font-weight: bold;
     font-size: 40px;
     text-align: center;
     border-radius: 5px;
@@ -44,6 +45,7 @@ h4 {
 
 h5 {
     color: darkorchid;
+    font-weight: bold;
     text-align: center;
     font-size: 20px;
     letter-spacing: 2px;

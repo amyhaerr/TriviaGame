@@ -149,7 +149,7 @@ $(document).ready(function () {
         $(".answers").text("Number Correct: ").append(correct).append('<br>');
         $(".answers").append("Number Incorrect: ").append(incorrect).append('<br>');
         $(".answers").append("Number Unanswered: ").append(unAnswered).append('<br>');
-    }
+    } 
     
 
     function reset () {

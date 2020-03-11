@@ -122,7 +122,7 @@ $(document).ready(function () {
                 correctAnswer();
             } else {
                 answered = true;
-                $('.question').text("YOUR ANSWER WAS:  " + game[indexQandA].answer[id] + "But the Real Answer is:  " + game[indexQandA].answer[correct]);
+                $('.question').text("Your Answer was:  " + game[indexQandA].answer[id] + " But the Real Answer is:  " + game[indexQandA].answer[correct]);
                 incorrectAnswer();
             }
 
@@ -131,9 +131,10 @@ $(document).ready(function () {
 
     function timer() {
         if (timeRemaining === 0) {
+            var answerId= game[indexQandA]["correct"];
             answered = true;
+            $('.question').text("The Correct Answer is: " + game[indexQandA].answer[answerId]);
             clearInterval(intervalId);
-            $('.question').text("The Correct Answer is: " + game[indexQandA].answer[correct]);
             unansweredQuestions();
         } else if (answered === true) {
             clearInterval(intervalId);
@@ -166,9 +167,9 @@ $(document).ready(function () {
                 $('.question').remove();
                 $('.timeRemaining').remove();
                 $('.answerImage').remove();
-                $('answers').append('<h4 class=allAnswers end>Correct Answers: '+correctAnswers + '</h4>');
-                $('answers').append('<h4 class=allAnswers end>Incorrect Answers: '+incorrectAnswers + '</h4>');
-                $('answers').append('<h4 class=allAnswers end>Unanswered Answers: '+unAnswered + '</h4>');
+                $('.answers').append('<h4 class=allAnswers end>Correct Answers: '+correct + '</h4>');
+                $('.answers').append('<h4 class=allAnswers end>Incorrect Answers: '+incorrect + '</h4>');
+                $('.answers').append('<h4 class=allAnswers end>Unanswered Answers: '+unAnswered + '</h4>');
                 ;setTimeout(function (){
                     location.reload()
                 }, 7000);

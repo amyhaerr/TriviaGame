@@ -118,7 +118,7 @@ $(document).ready(function () {
             var id = $(this).attr('id');
             if (id === correct) {
                 answered = true;
-                $('.question').text("The Correct Answer is:  " + game[indexQandA].answer[correct]);
+                $('.question').text("Yay! You Got it Right! The Answer is:  " + game[indexQandA].answer[correct]);
                 correctAnswer();
             } else {
                 answered = true;
@@ -155,7 +155,7 @@ $(document).ready(function () {
 
     function reset () {
         $('.allAnswers').remove();
-        $('.answers').append('<img class=answerImage width="150" height="150" src="' + game[indexQandA].image +'">');
+        $('.answers').append('<img class=answerImage width="250" height="250" src="' + game[indexQandA].image +'">');
         indexQandA++;
         if (indexQandA < game.length) {
             setTimeout(function () {

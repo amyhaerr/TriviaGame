@@ -169,7 +169,7 @@ $(document).ready(function () {
                 $('.answerImage').remove();
                 $('.answers').append('<h4 class=allAnswers end>Correct Answers: '+correct + '</h4>');
                 $('.answers').append('<h4 class=allAnswers end>Incorrect Answers: '+incorrect + '</h4>');
-                $('.answers').append('<h4 class=allAnswers end>Unanswered Answers: '+unAnswered + '</h4>');
+                $('.answers').append('<h4 class=allAnswers end>Unanswered: '+unAnswered + '</h4>');
                 ;setTimeout(function (){
                     location.reload()
                 }, 7000);

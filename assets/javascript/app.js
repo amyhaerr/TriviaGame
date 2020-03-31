@@ -16,9 +16,9 @@ $(document).ready(function () {
     //     $('.startButton');
     //     start();
     // });
-    
+
     // questions and answers for the game:
-    
+
     var game = [{
 
         question: "What is Crowley's nickname for Sam?",
@@ -94,7 +94,7 @@ $(document).ready(function () {
             'color': '#31A91A'
         });
         reset();
-   
+
     }
 
     function loadandA() {
@@ -104,7 +104,7 @@ $(document).ready(function () {
         if (answered === false) {
             timer();
         }
-        
+
 
         var correct = game[indexQandA].correct;
         var question = game[indexQandA].question;
@@ -113,7 +113,7 @@ $(document).ready(function () {
             var answer = game[indexQandA].answer[i];
             $('.answers').append('<h4 class=allAnswers id=' + i + '>' + answer + '</h4>');
         }
-        
+
         $("h4").click(function () {
             var id = $(this).attr('id');
             if (id === correct) {
@@ -131,7 +131,7 @@ $(document).ready(function () {
 
     function timer() {
         if (timeRemaining === 0) {
-            var answerId= game[indexQandA]["correct"];
+            var answerId = game[indexQandA]["correct"];
             answered = true;
             $('.question').text("The Correct Answer is: " + game[indexQandA].answer[answerId]);
             clearInterval(intervalId);
@@ -150,36 +150,36 @@ $(document).ready(function () {
         $(".answers").text("Number Correct: ").append(correct).append('<br>');
         $(".answers").append("Number Incorrect: ").append(incorrect).append('<br>');
         $(".answers").append("Number Unanswered: ").append(unAnswered).append('<br>');
-    } 
-    
+    }
 
-    function reset () {
+
+    function reset() {
         $('.allAnswers').remove();
-        $('.answers').append('<img class=answerImage width="250" height="250" src="' + game[indexQandA].image +'">');
+        $('.answers').append('<img class=answerImage width="250" height="250" src="' + game[indexQandA].image + '">');
         indexQandA++;
         if (indexQandA < game.length) {
             setTimeout(function () {
                 loadandA();
                 $('.answerImage').remove();
             }, 5000);
-        }else {
-            setTimeout(function (){
+        } else {
+            setTimeout(function () {
                 $('.question').remove();
                 $('.timeRemaining').remove();
                 $('.answerImage').remove();
-                $('.answers').append('<h4 class=allAnswers end>Correct Answers: '+correct + '</h4>');
-                $('.answers').append('<h4 class=allAnswers end>Incorrect Answers: '+incorrect + '</h4>');
-                $('.answers').append('<h4 class=allAnswers end>Unanswered: '+unAnswered + '</h4>');
-                ;setTimeout(function (){
+                $('.answers').append('<h4 class=allAnswers end>Correct Answers: ' + correct + '</h4>');
+                $('.answers').append('<h4 class=allAnswers end>Incorrect Answers: ' + incorrect + '</h4>');
+                $('.answers').append('<h4 class=allAnswers end>Unanswered: ' + unAnswered + '</h4>');
+                ; setTimeout(function () {
                     location.reload()
                 }, 7000);
             }, 5000);
         }
     };
-    
+
     var start = $('<button>Start</button>').click(function () {
         startPlay();
     });
-        $(".answers").append(start).css("text-align", "center");
-  
+    $(".answers").append(start).css("text-align", "center");
+
 }) 

@@ -1,7 +1,9 @@
- https://amyhaerr.github.io/TriviaGame/
-
-# Trivia Game (Supernatural)
+ # Trivia Game (Supernatural)
 Week 5 Assignment of Bootcamp
+
+https://amyhaerr.github.io/TriviaGame/
+
+<img src="assets/images/supernatural.jpg">
 
 ## Objective: 
 To create a trivia game on any subject using HTML, CSS, JavaScript, and jQuery

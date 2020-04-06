@@ -20,6 +20,14 @@ To create a trivia game on any subject using HTML, CSS, JavaScript, and jQuery
 8. After all seven questions, the player will be shown the number of correct answers, incorrect answers,and unanswered questions and an option to restart the game.
 
 
+## Technical Aspects:
+
+1. Description of Problem:
+    - To make a timed trivia game based on the subject of your choice using JavaScript and jQuery.
+2. How it was solved:
+    - After countless hours of research, reviews of previous activities, study groups, tutor support, and TA support, I arrived at a working trivia game.
+    - It also required a lot of trial and error to get the timing right on answering the question, showing the answer, and finally tallying up a score.
+
 ## Author and Acknowledgements:
  Author: Amy Haerr
 
